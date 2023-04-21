@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_list/widgets.dart';
 
 List tareas = [];
 
@@ -110,18 +109,13 @@ Future<void> dialog(BuildContext context) async {
                   icon: Icon(Icons.remove_red_eye)),
               IconButton(
                   onPressed: () {
-                    final tarea = {
-                      "id": 0,
+                    final mapa = {
+                      "id": tareas.length,
                       "titulo": tareaController.text,
                       "descripcion": descripcionController.text,
                     };
-                    final tarea2 = {
-                      "id": 0,
-                      "titulo": "bañar al perro",
-                      "descripcion": "asdasd",
-                    };
                     //guardar
-                    tareas.add(tarea2);
+                    tareas.add(mapa);
                     //esto se hace para vaciar el campo
                     tareaController.text = "";
                     descripcionController.text = "";
