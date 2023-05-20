@@ -125,38 +125,43 @@ Future<void> cartel(BuildContext context) async {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              "Añadir tareas",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+        contentPadding: EdgeInsets.all(0),
+        content: Container(
+          // height: 200,
+          // color: Colors.red,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                "Añadir tareas",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                controller: tituloController,
-                decoration: InputDecoration(hintText: "Titulo"),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                  controller: tituloController,
+                  decoration: InputDecoration(hintText: "Titulo"),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: TextFormField(
-                controller: descripcionController,
-                decoration: InputDecoration(hintText: "Descripcion"),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: TextFormField(
+                  controller: descripcionController,
+                  decoration: InputDecoration(hintText: "Descripcion"),
+                ),
               ),
-            ),
-            Row(
-              children: [
-                SizedBox(width: 5),
-                Text("¿Completado? "),
-                CustomSwitch(),
-              ],
-            )
-          ],
+              Row(
+                children: [
+                  SizedBox(width: 5),
+                  Text("¿Completado? "),
+                  CustomSwitch(),
+                ],
+              )
+            ],
+          ),
         ),
         actions: <Widget>[
           Row(
